@@ -10,3 +10,5 @@ Transfer the config file via a secure channel to you android device, import it a
 ## Missing
 - Multiple E-Mail-Accounts
 - Multiple E-Mail-Names
+
+![Screenshot](doc/screenshot.png)
