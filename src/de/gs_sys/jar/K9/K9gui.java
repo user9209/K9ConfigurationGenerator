@@ -94,7 +94,7 @@ public class K9gui implements Initializable {
 
         File selectedFile = fileChooser.showSaveDialog(null);
         if (selectedFile != null) {
-            Files.write(selectedFile.toPath(),out.getBytes(StandardCharsets.UTF_8));
+            Files.write(addExtension(selectedFile.toPath()),out.getBytes(StandardCharsets.UTF_8));
         }
     }
 
@@ -131,5 +131,14 @@ public class K9gui implements Initializable {
         // Bug in JDK so use \r not \n !!!
         // mail_addresses.promptTextProperty().setValue("mail1@example.com\rmail2@example.com");
         mail_addresses.setPromptText("mail1@example.com\rmail2@example.com");
+    }
+    
+    public static String addExtension(String filename)
+    {
+        if(!filename.matches(".+\\.k9s$"))
+        {
+            filename += ".k9s";
+        }
+        return filename;
     }
 }
