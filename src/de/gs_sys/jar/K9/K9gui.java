@@ -30,6 +30,7 @@ import java.net.URI;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
 public class K9gui implements Initializable {
@@ -94,7 +95,7 @@ public class K9gui implements Initializable {
 
         File selectedFile = fileChooser.showSaveDialog(null);
         if (selectedFile != null) {
-            Files.write(addExtension(selectedFile.toPath()),out.getBytes(StandardCharsets.UTF_8));
+            Files.write(Paths.get(addExtension(selectedFile.getAbsolutePath())),out.getBytes(StandardCharsets.UTF_8));
         }
     }
 

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="K9ConfigurationGenerator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/K9ConfigurationGenerator_jar</output-path>
+    <root id="archive" name="K9ConfigurationGenerator.jar">
+      <element id="module-output" name="K9ConfigurationGenerator" />
+    </root>
+  </artifact>
+</component>
