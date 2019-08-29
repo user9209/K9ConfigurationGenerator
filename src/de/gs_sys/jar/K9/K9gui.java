@@ -53,6 +53,9 @@ public class K9gui implements Initializable {
     private TextArea mail_addresses;
 
     @FXML
+    private TextField bccMail;
+
+    @FXML
     private TextField unsername;
 
     @FXML
@@ -83,8 +86,8 @@ public class K9gui implements Initializable {
     @FXML
     void onExport(ActionEvent event) throws Exception {
         String out = K9Config.generate(
-                sender_name.getText(), mail_addresses.getText(),unsername.getText(),
-                password.getText(),imap_server.getText(),smtp_server.getText()
+                sender_name.getText(), mail_addresses.getText(), bccMail. getText(), unsername.getText(),
+                password.getText(), imap_server.getText(), smtp_server.getText()
         );
 
         FileChooser fileChooser = new FileChooser();

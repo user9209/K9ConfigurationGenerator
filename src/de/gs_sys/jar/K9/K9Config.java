@@ -38,7 +38,7 @@ public class K9Config {
 
     private static String name = "";
 
-    public static String generate(String name, String listMailAddresses, String auth_username, String auth_password,
+    public static String generate(String name, String listMailAddresses, String bbcMail, String auth_username, String auth_password,
                                  String imap_server, String smtp_server) {
         K9Config.name = name;
 
@@ -136,6 +136,7 @@ public class K9Config {
                         "      </outgoing-server>\n" +
                         "      <settings>\n" +
                         "        <value key=\"allowRemoteSearch\">false</value>\n" +
+                        (!bbcMail.isEmpty() ? "        <value key=\"alwaysBcc\">" + bbcMail + "</value>\n" : "") +
                         "        <value key=\"alwaysShowCcBcc\">false</value>\n" +
                         "        <value key=\"archiveFolderName\">Archiv</value>\n" +
                         "        <value key=\"autoExpandFolderName\">INBOX</value>\n" +

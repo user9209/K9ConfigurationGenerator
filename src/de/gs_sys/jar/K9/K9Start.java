@@ -33,7 +33,7 @@ public class K9Start extends Application {
                 Objects.requireNonNull(getClass().getClassLoader().
                 getResource("K9ConfigGenerator.fxml")));
         primaryStage.setTitle("K9 Configuration Generator");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 600, 420));
         primaryStage.show();
     }
 }

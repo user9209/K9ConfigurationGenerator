@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.160" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.gs_sys.jar.K9.K9gui">
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.gs_sys.jar.K9.K9gui">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -30,7 +30,7 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-            <TabPane fx:id="tab_list" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <TabPane fx:id="tab_list" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
               <tabs>
                 <Tab fx:id="tab_create" text="Create Configuration">
                   <content>
@@ -56,6 +56,16 @@
                                              </HBox.margin>
                                           </Label>
                                           <TextArea fx:id="mail_addresses" prefHeight="100.0" prefWidth="300.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0">
+                                       <children>
+                                          <Label prefWidth="150.0" text="BCC-Mail">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="bccMail" prefWidth="300.0" promptText="BCC email" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="600.0">
